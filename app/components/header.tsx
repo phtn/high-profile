@@ -3,7 +3,9 @@
 import { Popover } from '@base-ui/react/popover'
 import Link from 'next/link'
 import { ThemeToggle } from './theme-toggle'
+import { Button } from './ui/button'
 import { LinkButton } from './ui/link-button'
+import { WalletConnector } from './wallet'
 
 const NAV_LINKS = [
   { href: '#features', label: 'Features' },
@@ -12,14 +14,17 @@ const NAV_LINKS = [
 ] as const
 
 export function Header() {
+  const connect = () => {
+    console.log('Connecting...')
+  }
   return (
-    <header className='sticky top-0 z-50 w-full border-b border-neutral-200/80 bg-white/95 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/95'>
+    <header className='sticky top-0 z-50 w-full border-b border-dotted border-neutral-200/80 bg-white/95 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/95'>
       <div className='mx-auto grid h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 sm:px-6 lg:px-8'>
         <Link
           href='/'
-          className='text-lg font-medium tracking-tight text-neutral-900 dark:text-white'
+          className='text-lg font-cv font-semibold text-neutral-800 dark:text-white'
           aria-label='High Profile – Home'>
-          &Cash
+          <span className='opacity-50 font-medium'>&</span>Cash
         </Link>
 
         {/* Desktop nav – centered */}
@@ -28,7 +33,7 @@ export function Header() {
             <Link
               key={href}
               href={href}
-              className='font-okx font-medium text-neutral-500 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white px-12 border-l'>
+              className='font-cv font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white px-12 py-0.5'>
               {label}
             </Link>
           ))}
@@ -37,9 +42,10 @@ export function Header() {
         {/* Desktop: theme toggle + CTA – right */}
         <div className='hidden items-center justify-end gap-2 md:flex'>
           <ThemeToggle />
-          <LinkButton href='#cta' variant='primary' className='font-semibold'>
+          <Button onClick={connect} variant='primary' className='font-semibold'>
             Sign in
-          </LinkButton>
+          </Button>
+          <WalletConnector ref={null} />
         </div>
 
         {/* Mobile nav: theme toggle + Base UI Popover */}
@@ -69,7 +75,7 @@ export function Header() {
                       <Link
                         key={href}
                         href={href}
-                        className='rounded px-3 py-2.5 text-sm font-medium text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800'>
+                        className='rounded px-3 py-2.5 text-sm hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800'>
                         {label}
                       </Link>
                     ))}
