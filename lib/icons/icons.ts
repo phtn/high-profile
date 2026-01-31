@@ -855,6 +855,50 @@ export const icons = {
       '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 6.25c0 1.933-3.246 3.5-7.25 3.5s-7.25-1.567-7.25-3.5m14.5 0c0-1.933-3.246-3.5-7.25-3.5s-7.25 1.567-7.25 3.5m14.5 0V12M4.75 6.25V12m0 0v5.75c0 1.933 3.246 3.5 7.25 3.5s7.25-1.567 7.25-3.5V12m-14.5 0c0 1.933 3.246 3.5 7.25 3.5s7.25-1.567 7.25-3.5"/>',
     viewBox: '0 0 24 24',
     set: 'proicons'
+  },
+  'arrow-right': {
+    symbol:
+      '<path fill="currentColor" d="M12.646 6.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708l4.147-4.146H6a.5.5 0 0 1 0-1h10.793l-4.147-4.146a.5.5 0 0 1 0-.708"/>',
+    viewBox: '0 0 24 24',
+    set: 'stash'
+  },
+  email: {
+    symbol:
+      '<g fill="none" stroke="currentColor"><rect width="16" height="12" x="4" y="6" rx="2"/><path d="m4 9l7.106 3.553a2 2 0 0 0 1.788 0L20 9"/></g>',
+    viewBox: '0 0 24 24',
+    set: 'lets-icons'
+  },
+  x: {
+    symbol: `<path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89a.996.996 0 0 0 0-1.4z"/>`,
+    viewBox: '0 0 24 24',
+    set: 'material'
+  },
+  'chevron-right': {
+    symbol: '<path fill="none" stroke="currentColor" stroke-width="2" d="m9 6l6 6l-6 6"/>',
+    viewBox: '0 0 24 24',
+    set: 'lets-icons'
+  },
+  'chevron-left': {
+    symbol: '<path fill="none" stroke="currentColor" stroke-width="2" d="m15 6l-6 6l6 6"/>',
+    viewBox: '0 0 24 24',
+    set: 'lets-icons'
+  },
+  google: {
+    symbol: `<path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>`,
+    viewBox: '0 0 24 24',
+    set: 'google'
+  },
+  'at-sign': {
+    symbol:
+      '<g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M21 12a9 9 0 1 0-6.67 8.693"/><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" d="M16 9v4.5a2.5 2.5 0 0 0 5 0V12"/></g>',
+    viewBox: '0 0 24 24',
+    set: 'lets-icons'
+  },
+  'email-fast': {
+    symbol:
+      '<path fill="currentColor" d="M22 5.5H9c-1.1 0-2 .9-2 2v9a2 2 0 0 0 2 2h13c1.11 0 2-.89 2-2v-9a2 2 0 0 0-2-2m0 3.67l-6.5 3.33L9 9.17V7.5l6.5 3.31L22 7.5zM5 16.5c0 .17.03.33.05.5H1c-.552 0-1-.45-1-1s.448-1 1-1h4zM3 7h2.05c-.02.17-.05.33-.05.5V9H3c-.55 0-1-.45-1-1s.45-1 1-1m-2 5c0-.55.45-1 1-1h3v2H2c-.55 0-1-.45-1-1"/>',
+    viewBox: '0 0 24 24',
+    set: 'mdi'
   }
 }
 

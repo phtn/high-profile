@@ -1,10 +1,12 @@
 'use client'
 
+import { useAuth } from '@/hooks/use-auth'
 import { Popover } from '@base-ui/react/popover'
 import Link from 'next/link'
+import { useAuthCtx } from '../ctx/auth'
+import { AuthModal } from './auth-modal'
 import { ThemeToggle } from './theme-toggle'
 import { Button } from './ui/button'
-import { LinkButton } from './ui/link-button'
 import { WalletConnector } from './wallet'
 
 const NAV_LINKS = [
@@ -17,6 +19,10 @@ export function Header() {
   const connect = () => {
     console.log('Connecting...')
   }
+
+  const { user, loading: authLoading } = useAuth()
+  const { isAuthModalOpen, setAuthModalOpen, closeAuthModal } = useAuthCtx()
+  const handleOpenAuthModal = () => setAuthModalOpen(true)
   return (
     <header className='sticky top-0 z-50 w-full border-b border-dotted border-neutral-200/80 bg-white/95 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/95'>
       <div className='mx-auto grid h-16 max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 sm:px-6 lg:px-8'>
@@ -42,8 +48,8 @@ export function Header() {
         {/* Desktop: theme toggle + CTA – right */}
         <div className='hidden items-center justify-end gap-2 md:flex'>
           <ThemeToggle />
-          <Button onClick={connect} variant='primary' className='font-semibold'>
-            Sign in
+          <Button onClick={handleOpenAuthModal} variant='primary' size='md' className='font-cv font-medium'>
+            {user ? user.displayName?.substring(0, 4).toUpperCase() : 'Sign in'}
           </Button>
           <WalletConnector ref={null} />
         </div>
@@ -80,9 +86,9 @@ export function Header() {
                       </Link>
                     ))}
                     <div className='mt-2 pt-2 border-t border-neutral-200 dark:border-neutral-800'>
-                      <LinkButton href='#cta' variant='primary' className='w-full justify-center'>
+                      <Button variant='primary' className='w-full justify-center' onPress={handleOpenAuthModal}>
                         Sign in
-                      </LinkButton>
+                      </Button>
                     </div>
                   </div>
                 </Popover.Popup>
@@ -91,6 +97,7 @@ export function Header() {
           </Popover.Root>
         </div>
       </div>
+      <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />
     </header>
   )
 }

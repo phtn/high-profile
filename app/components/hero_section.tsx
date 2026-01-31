@@ -31,7 +31,7 @@ const LeftColumn = () => {
         Payments.
       </h1>
       <p className='mt-8 max-w-xl text-sm md:text-lg opacity-80'>Fast, reliable and top-notch security.</p>
-      <div className='mt-10 flex flex-row gap-0'>
+      <div className='mt-10 flex flex-row gap-2'>
         <LinkButton href='#cta'>Get started</LinkButton>
         <LinkButton href='#how-it-works' variant='secondary'>
           How it works

@@ -16,7 +16,7 @@ const STEPS: Array<MiniCardProps> = [
   {
     id: '03',
     title: 'Integration',
-    description: 'Integrate our payment gateway into your website.',
+    description: 'Integrate our payments to your website.',
     icon: 'container'
   }
 ] as const

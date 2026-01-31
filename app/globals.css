@@ -178,6 +178,234 @@ body {
   animation: marquee 45s linear infinite;
 }
 
+/* Split-flap display view transitions */
+@keyframes flap-out {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-90deg);
+  }
+}
+@keyframes flap-in {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+/* Perspective and 3D for flap slots */
+::view-transition-group(flap-0),
+::view-transition-group(flap-1),
+::view-transition-group(flap-2),
+::view-transition-group(flap-3),
+::view-transition-group(flap-4),
+::view-transition-group(flap-5),
+::view-transition-group(flap-6),
+::view-transition-group(flap-7),
+::view-transition-group(flap-8),
+::view-transition-group(flap-9),
+::view-transition-group(flap-10),
+::view-transition-group(flap-11),
+::view-transition-group(flap-12),
+::view-transition-group(flap-13),
+::view-transition-group(flap-14),
+::view-transition-group(flap-15),
+::view-transition-group(flap-16),
+::view-transition-group(flap-17),
+::view-transition-group(flap-18),
+::view-transition-group(flap-19),
+::view-transition-group(flap-20) {
+  perspective: 600px;
+  transform-style: preserve-3d;
+}
+
+/* Old flap: hinge at bottom, flip up and away - base */
+::view-transition-old(flap-0),
+::view-transition-old(flap-1),
+::view-transition-old(flap-2),
+::view-transition-old(flap-3),
+::view-transition-old(flap-4),
+::view-transition-old(flap-5),
+::view-transition-old(flap-6),
+::view-transition-old(flap-7),
+::view-transition-old(flap-8),
+::view-transition-old(flap-9),
+::view-transition-old(flap-10),
+::view-transition-old(flap-11),
+::view-transition-old(flap-12),
+::view-transition-old(flap-13),
+::view-transition-old(flap-14),
+::view-transition-old(flap-15),
+::view-transition-old(flap-16),
+::view-transition-old(flap-17),
+::view-transition-old(flap-18),
+::view-transition-old(flap-19),
+::view-transition-old(flap-20) {
+  mix-blend-mode: normal;
+  transform-origin: center bottom;
+  animation: flap-out 0.6s ease both !important;
+}
+
+/* Old flap: staggered delay */
+::view-transition-old(flap-0) {
+  animation-delay: 0s !important;
+}
+::view-transition-old(flap-1) {
+  animation-delay: 0.08s !important;
+}
+::view-transition-old(flap-2) {
+  animation-delay: 0.16s !important;
+}
+::view-transition-old(flap-3) {
+  animation-delay: 0.24s !important;
+}
+::view-transition-old(flap-4) {
+  animation-delay: 0.32s !important;
+}
+::view-transition-old(flap-5) {
+  animation-delay: 0.4s !important;
+}
+::view-transition-old(flap-6) {
+  animation-delay: 0.56s !important;
+}
+::view-transition-old(flap-7) {
+  animation-delay: 0.64s !important;
+}
+::view-transition-old(flap-8) {
+  animation-delay: 0.72s !important;
+}
+::view-transition-old(flap-9) {
+  animation-delay: 0.8s !important;
+}
+::view-transition-old(flap-10) {
+  animation-delay: 0.88s !important;
+}
+::view-transition-old(flap-11) {
+  animation-delay: 0.96s !important;
+}
+::view-transition-old(flap-12) {
+  animation-delay: 1.04s !important;
+}
+::view-transition-old(flap-13) {
+  animation-delay: 1.12s !important;
+}
+::view-transition-old(flap-14) {
+  animation-delay: 1.2s !important;
+}
+::view-transition-old(flap-15) {
+  animation-delay: 1.28s !important;
+}
+::view-transition-old(flap-16) {
+  animation-delay: 1.36s !important;
+}
+::view-transition-old(flap-17) {
+  animation-delay: 1.44s !important;
+}
+::view-transition-old(flap-18) {
+  animation-delay: 1.52s !important;
+}
+::view-transition-old(flap-19) {
+  animation-delay: 1.6s !important;
+}
+::view-transition-old(flap-20) {
+  animation-delay: 1.68s !important;
+}
+
+/* New flap: hinge at top, flip up from below - base */
+::view-transition-new(flap-0),
+::view-transition-new(flap-1),
+::view-transition-new(flap-2),
+::view-transition-new(flap-3),
+::view-transition-new(flap-4),
+::view-transition-new(flap-5),
+::view-transition-new(flap-6),
+::view-transition-new(flap-7),
+::view-transition-new(flap-8),
+::view-transition-new(flap-9),
+::view-transition-new(flap-10),
+::view-transition-new(flap-11),
+::view-transition-new(flap-12),
+::view-transition-new(flap-13),
+::view-transition-new(flap-14),
+::view-transition-new(flap-15),
+::view-transition-new(flap-16),
+::view-transition-new(flap-17),
+::view-transition-new(flap-18),
+::view-transition-new(flap-19),
+::view-transition-new(flap-20) {
+  mix-blend-mode: normal;
+  transform-origin: center top;
+  animation: flap-in 0.5s ease both !important;
+}
+
+/* New flap: staggered delay (same as old so they flip in sequence) */
+::view-transition-new(flap-0) {
+  animation-delay: 0s !important;
+}
+::view-transition-new(flap-1) {
+  animation-delay: 0.08s !important;
+}
+::view-transition-new(flap-2) {
+  animation-delay: 0.16s !important;
+}
+::view-transition-new(flap-3) {
+  animation-delay: 0.24s !important;
+}
+::view-transition-new(flap-4) {
+  animation-delay: 0.32s !important;
+}
+::view-transition-new(flap-5) {
+  animation-delay: 0.4s !important;
+}
+::view-transition-new(flap-6) {
+  animation-delay: 0.48s !important;
+}
+::view-transition-new(flap-7) {
+  animation-delay: 0.56s !important;
+}
+::view-transition-new(flap-8) {
+  animation-delay: 0.64s !important;
+}
+::view-transition-new(flap-9) {
+  animation-delay: 0.72s !important;
+}
+::view-transition-new(flap-10) {
+  animation-delay: 0.8s !important;
+}
+::view-transition-new(flap-11) {
+  animation-delay: 0.88s !important;
+}
+::view-transition-new(flap-12) {
+  animation-delay: 0.96s !important;
+}
+::view-transition-new(flap-13) {
+  animation-delay: 1.04s !important;
+}
+::view-transition-new(flap-14) {
+  animation-delay: 1.12s !important;
+}
+::view-transition-new(flap-15) {
+  animation-delay: 1.2s !important;
+}
+::view-transition-new(flap-16) {
+  animation-delay: 1.28s !important;
+}
+::view-transition-new(flap-17) {
+  animation-delay: 1.36s !important;
+}
+::view-transition-new(flap-18) {
+  animation-delay: 1.44s !important;
+}
+::view-transition-new(flap-19) {
+  animation-delay: 1.52s !important;
+}
+::view-transition-new(flap-20) {
+  animation-delay: 1.6s !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

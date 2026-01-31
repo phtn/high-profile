@@ -1,5 +1,5 @@
+import { CryptoFlapDisplay } from './components/crypto-prices'
 import { CtaSection } from './components/cta_section'
-import { CryptoMarquee } from './components/crypto_marquee'
 import { FaqSection } from './components/faq_section'
 import { FeaturesSection } from './components/features_section'
 import { Footer } from './components/footer'
@@ -12,7 +12,8 @@ export default function Root() {
   return (
     <div className='min-h-screen bg-white font-sans text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100'>
       <Header />
-      <CryptoMarquee />
+      <CryptoFlapDisplay />
+      {/*<CryptoMarquee />*/}
       <main>
         <HeroSection />
         <QuickLinksSection />
