@@ -23,7 +23,7 @@ export interface ButtonProps extends BaseButtonProps {
 export function Button({ variant = 'primary', className = '', ...props }: ButtonProps) {
   return (
     <BaseButton
-      className={`inline-flex items-center justify-center rounded-xs px-8 py-1 text-sm font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50 ${variantStyles[variant]} ${className}`}
+      className={`inline-flex items-center justify-center rounded-xs px-3 sm:px-4 md:px-8 py-1 text-sm font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50 whitespace-nowrap ${variantStyles[variant]} ${className}`}
       {...props}>
       <span>{props.children}</span>
     </BaseButton>

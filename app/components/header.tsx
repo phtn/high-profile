@@ -68,9 +68,9 @@ export function Header() {
             <Popover.Portal>
               <Popover.Positioner>
                 <Popover.Popup
-                  className='w-[calc(100vw-2rem)] rounded border border-neutral-200 bg-white p-3 shadow-lg dark:border-neutral-800 dark:bg-neutral-900'
+                  className='w-[calc(100vw-12rem)] rounded border border-neutral-200 bg-white p-3 shadow-lg dark:border-neutral-800 dark:bg-neutral-900'
                   initialFocus={false}>
-                  <div className='flex flex-col gap-0.5'>
+                  <div className='flex flex-col gap-0.5 font-cv'>
                     {NAV_LINKS.map(({ href, label }) => (
                       <Link
                         key={href}
@@ -81,7 +81,7 @@ export function Header() {
                     ))}
                     <div className='mt-2 pt-2 border-t border-neutral-200 dark:border-neutral-800'>
                       <LinkButton href='#cta' variant='primary' className='w-full justify-center'>
-                        Get started
+                        Sign in
                       </LinkButton>
                     </div>
                   </div>

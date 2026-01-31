@@ -11,7 +11,7 @@ export function HeroSection() {
     <section
       className='px-4 pb-24 pt-20 sm:px-6 sm:pb-20 sm:pt-20 lg:px-8 lg:pb-28 lg:pt-28'
       aria-labelledby='hero-heading'>
-      <div className='mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16'>
+      <div className='mx-auto grid md:max-w-6xl md:gap-12 grid-cols-2 lg:items-center lg:gap-16'>
         <LeftColumn />
         <RightColumn />
       </div>
@@ -30,8 +30,8 @@ const LeftColumn = () => {
         <br />
         Payments.
       </h1>
-      <p className='mt-8 max-w-xl text-lg opacity-80'>Fast, reliable and top-notch security.</p>
-      <div className='mt-10 flex flex-col gap-0 sm:flex-row'>
+      <p className='mt-8 max-w-xl text-sm md:text-lg opacity-80'>Fast, reliable and top-notch security.</p>
+      <div className='mt-10 flex flex-row gap-0'>
         <LinkButton href='#cta'>Get started</LinkButton>
         <LinkButton href='#how-it-works' variant='secondary'>
           How it works
@@ -55,7 +55,7 @@ const RightColumn = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 0.6, ease: 'easeInOut' }}
         className='absolute'>
-        <Icon name='cyc' className='size-100' />
+        <Icon name='cyc' className='md:size-100 size-50' />
       </motion.div>
       <div className='absolute inset-0 flex items-center justify-center text-sm font-medium text-background'>
         <Tracer onTraceStart={handleTraceStart} />

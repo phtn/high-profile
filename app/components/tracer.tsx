@@ -150,7 +150,12 @@ type SvgProps = {
 const Svg = ({ set }: SvgProps) => {
   return (
     <div className='absolute flex justify-center items-center'>
-      <svg width='160' height='160' viewBox={set.viewBox} fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden>
+      <svg
+        className='md:size-40 size-20'
+        viewBox={set.viewBox}
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        aria-hidden>
         {set.paths.map((path, i) => (
           <path
             key={i}
